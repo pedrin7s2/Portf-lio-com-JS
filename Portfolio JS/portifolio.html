@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Portiflio</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<header>
+    <div class="interface">
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#topo1">HOME</a></li>
+
+                <li><a href="#especialidades1">ESPECIALIDADES</a></li>
+
+                <li><a href="#sobre1">SOBRE</a></li>
+
+
+
+
+            </ul>
+        </nav>
+
+        <section id="contato">
+            <div class="contatos">
+
+                <a href="#contatos">
+                    <button>CONTATOS</button>
+
+                </a>
+            </div>
+
+        </section>
+    </div>
+</header>
+
+
+<body>
+
+    <section id="topo1">
+
+
+
+        <section class="topo">
+
+
+            <div class="interface">
+
+
+                <div class="flex">
+
+
+                    <div class="meutopo">
+
+
+                        <h1>NO QUE POSSO TE AJDUAR?</h1>
+                        
+
+                        
+                    </div>
+
+                    <div class="img-topo">
+                        <img src="S.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <main>
+        <section id="especialidades1">
+            <section class="especialidades">
+                <div class="interface">
+                    <br>
+                    <h2 class="titulo">MINHAS
+                        </a> <span>RESPONSA.</span></h2>
+
+
+
+
+                    <div class="flex">
+                        <div class="especialidades-box">
+                            <i class="bi bi-code-slash"></i>
+                            <h3> Aprendendo Programação</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, perspiciatis. Mollitia
+                                quas
+                                adipisci reiciendis. Sed obcaecati reprehenderit error nostrum itaque ab iste ad atque
+                                mollitia,
+                                aspernatur sunt voluptatem ex est.</p>
+                            </div>
+
+                        <div class="especialidades-box">
+                            <i class="bi bi-display"></i>
+                            <h3>T.I</h3>
+                            <p>Sei tudo de hardware e software. 
+                                monto seu pc em menos de 15 minutos só achamar Whats.
+                                
+                            </p>
+                        </div>
+                    </div> 
+            </section>
+        </section>
+    </main>
+
+
+    
+
+
+    <section id="sobre1">
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="Imagem do WhatsApp de 2024-11-28 à(s) 17.45.48_4bbd306e.jpg" alt="">
+                    </div> 
+
+                    <div class="txt-sobre">
+                        <h2>OIEE, <span>EU ME CHAMO PEDRO GHUILHERME</span></h2>
+
+                        
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae adipisci, autem
+                            voluptates,
+                            aspernatur error ipsum pariatur modi cumque repellat, voluptatem aliquid esse
+                            alias?
+                            Consequuntur esse sit error, reiciendis temporibus dignissimos.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nihil
+                            reiciendis
+                            laudantium
+                            corrupti exercitationem ipsa rem vel a, adipisci nisi perferendis deleniti
+                            pariatur modi
+                            quia
+                            tenetur id sit excepturi nam.</p>
+
+
+                        </div> 
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </section>
+
+
+
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contatos</h2>
+            <p>Se vocé deseja entrar em contato comigo, por favor, preencha o formulário abaixo:</p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Seu nome" required>
+                <input type="email" id="email" placeholder="Seu email" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+  
+
+
+<footer>
+    <section id="contatos">
+        
+
+            <div class="line-footer border">
+
+
+                <p><i class="bi bi-envelope-at"><a
+
+                    
+                            href="pedroguilhermeduartepereira@gmail.com">pedroguilhermeduartepereira@gmail.com
+                            11 930014695</a>
+                        
+</footer>
+
+
+
+
+<style>
+    .stars {
+        display: inline-block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .star {
+        color: #ccc;
+    }
+    .star.selected {
+        color: rgb(231, 228, 13);
+    }
+    .star:hover {
+        color: #f7a100;
+    }
+    .rating {
+        margin-top: 10px;
+    }
+</style>
+
+
+</head>
+<body>
+
+    <h2>Avalie meu Portiflio</h2>
+
+    <div class="stars" id="rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div>
+
+    <div class="rating" id="ratingValue">Nenhuma avaliação feita ainda.</div>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-value');
+                updateStars(rating);
+                ratingValue.textContent = `Você avaliou com ${rating} estrela(s).;`
+            });
+
+            star.addEventListener('mouseover', () => {
+                const rating = star.getAttribute('data-value');
+                highlightStars(rating);
+            });
+
+            star.addEventListener('mouseout', () => {
+                removeHighlight();
+            });
+        });
+
+        function updateStars(rating) {
+            stars.forEach(star => {
+                if (star.getAttribute('data-value') <= rating) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+        }
+
+        function highlightStars(rating) {
+            stars.forEach(star => {
+                if (star.getAttribute('data-value') <= rating) {
+                    star.classList.add('hover');
+                } else {
+                    star.classList.remove('hover');
+                }
+            });
+        }
+
+        function removeHighlight() {
+            stars.forEach(star => {
+                star.classList.remove('hover');
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
